@@ -44,11 +44,11 @@
       <el-table-column label="操作" width="80">
         <template slot-scope="page">
           <el-button
-            size="small"type="text"
+            size="small" type="text"
             @click="edit(page.row.pageId)">编辑
           </el-button>
           <el-button
-            size="small"type="text"
+            size="small" type="text"
             @click="del(page.row.pageId)">删除
           </el-button>
         </template>
@@ -101,27 +101,28 @@
         this.params.page = page;
         this.query()
       },
-    /*  edit:function(pageId){
+      edit: function (pageId) {
         //打开修改页面
         this.$router.push({
-          path:'/cms/page/edit/'+pageId
+          path: '/cms/page/edit/' + pageId
         })
-      },
-      del:function (pageId) {
-        this.$confirm('您确认删除吗?', '提示', { }).then(() => {
+      }
+      /*  ,
+     del:function (pageId) {
+       this.$confirm('您确认删除吗?', '提示', { }).then(() => {
 
-          //调用服务端接口
-          cmsApi.page_del(pageId).then(res=>{
+         //调用服务端接口
+         cmsApi.page_del(pageId).then(res=>{
 
-            if(res.success){
-              this.$message.success("删除成功")
-              //刷新页面
-              this.query()
-            }else{
-              this.$message.error("删除失败")
-            }
-          })
-        })*/
+           if(res.success){
+             this.$message.success("删除成功")
+             //刷新页面
+             this.query()
+           }else{
+             this.$message.error("删除失败")
+           }
+         })
+       })*/
 
 
     },
